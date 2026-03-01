@@ -1,8 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using SelfAspNet_MVC.DB;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDbContext<MyContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("SelfAspNet"));
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
