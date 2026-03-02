@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<MyContext>(options =>
 {
-    options.UseNpgsql(builder.Configuration.GetConnectionString("SelfAspNet"));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("MyContext"));
 });
 var app = builder.Build();
 
