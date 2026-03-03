@@ -5,7 +5,7 @@
 namespace SelfAspNet_MVC.Migrations
 {
     /// <inheritdoc />
-    public partial class initialAgaint : Migration
+    public partial class InitialAgaint : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

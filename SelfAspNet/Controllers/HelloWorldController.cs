@@ -1,9 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SelfAspNet_MVC.DB;
 
-namespace SelfAspNet.Models
+namespace SelfAspNet_MVC.Controllers
 {
     public class HelloWorldController : Controller
-    {
+    {   
+        private readonly MyContext _db;
+        public HelloWorldController(MyContext db)
+        {
+            _db = db;               
+        }
+        public IActionResult List()
+        {
+       
+            return View(_db.Books);
+        }
         public IActionResult Index()
         {
             return View();

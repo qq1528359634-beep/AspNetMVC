@@ -13,7 +13,7 @@ namespace SelfAspNet_MVC.Migrations
 {
     [DbContext(typeof(MyContext))]
     [Migration("20260302132636_initialAgaint")]
-    partial class initialAgaint
+    partial class InitialAgaint
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
