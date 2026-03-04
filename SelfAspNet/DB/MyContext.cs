@@ -4,10 +4,10 @@ using SelfAspNet_MVC.Models;
 namespace SelfAspNet_MVC.DB
 {
     //提供参数 建立数据库连接 以及 定义数据模型和数据库表之间的映射关系
-    public class MyContext:DbContext
+    public class MyContext : DbContext
     {
-        
-        public MyContext(DbContextOptions<MyContext> options):base(options)
+
+        public MyContext(DbContextOptions<MyContext> options) : base(options)
         {
             //接收配置文件并上交给父类 DbContext 来处理
             //DbContextOptions<ApplicationDbContext>  包含了连接字符串等数据库连接相关的配置信息
