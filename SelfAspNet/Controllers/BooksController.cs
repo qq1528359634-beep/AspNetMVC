@@ -34,7 +34,7 @@ namespace SelfAspNet_MVC.Controllers
             }
 
             var book = await _context.Books
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.Id == id); 
             if (book == null)
             {
                 return NotFound();
